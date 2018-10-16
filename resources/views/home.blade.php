@@ -52,6 +52,7 @@
         </nav>
         <section class="header">
             <div class="container-fluid">
+                    <img class="ray" src="{{asset('assets/images/ray.png')}}">
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-8 col-xs-12 offset-lg-4 offset-md-4 offset-sm-3">
                         <div class="card">
