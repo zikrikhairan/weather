@@ -175,19 +175,34 @@
         </section>
         
         <!-- Bootstrap core JavaScript -->
+        <script>
+            // Note: This example requires that you consent to location sharing when
+            // prompted by your browser. If you see the error "The Geolocation service
+            // failed.", it means you probably did not give permission for the browser to
+            // locate you.
+            function initMap() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(function(position) {
+                        var pos = {
+                            lat: position.coords.latitude,
+                            lng: position.coords.longitude
+                        };
+                        console.log(pos);
+                    }, function() {
+                        
+                    });
+                } 
+            }
+        </script>
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCs3DPAN9pcNR6CBFXolpNNrE7PIxpbiGA&callback=initMap">
+        </script>
+      
         <script src="{{asset('assets/jquery/jquery.min.js')}}"></script>
         <script src="{{asset('assets/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-    
         <script>
         $(document).ready(function(){
-            $.ajax({
-                url: "https://www.metaweather.com/api/location/1047378/", 
-                type: "GET",
-                success: function(result){
-                    // $("#div1").html(result);
-                    console.log(result);
-                }
-            });
+            
         });
         </script>
     </body>

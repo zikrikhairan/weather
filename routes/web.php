@@ -14,3 +14,6 @@
 //     return view('welcome');
 // });
 Route::get('/', 'HomeController@index');
+Route::get('/location/{keyword}', 'HomeController@location');
+Route::get('/location/{latitude}/{longitude}', 'HomeController@location_by_lat_long');
+Route::get('/weather/{id}', 'HomeController@weather');
