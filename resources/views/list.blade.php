@@ -37,15 +37,6 @@
                                 <a class="dropdown-item" href="{{url('list')}}">List City</a>
                             </div>
                         </li>
-                        <li class="nav-item">
-                            <a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                        </li>
-                        <li class="nav-item">
-                            <div class="form-inline">
-                                <input class="form-control mr-sm-2" type="search" placeholder="Find Location" aria-label="Search" id="search">
-                                <button class="btn btn-outline-light my-2 my-sm-0" type="button" id="btn_search">Find</button>
-                            </div>
-                        </li>
                     </ul>
                 </div>
             </div>

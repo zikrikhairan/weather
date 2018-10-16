@@ -184,7 +184,7 @@
                 </div>
             </div>
         </section>
-        
+        <div class="modal"></div>
         <!-- Bootstrap core JavaScript -->
         <script>
             // Note: This example requires that you consent to location sharing when

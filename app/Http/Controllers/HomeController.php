@@ -21,8 +21,7 @@ class HomeController extends Controller
         $data = User::with('saved_cities')->where('token', $token)->first();
         return view('list', ["data" => $data]);
     }
-
-
+    
     public function location($keyword){
         $data = Helpers::metaweather('GET','location/search/?query='.$keyword);
         return $data;

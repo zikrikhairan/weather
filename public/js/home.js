@@ -1,4 +1,5 @@
 function weather_by_city(location){
+    start_loading()
     $.ajax({
         method: "GET",
         url: url_location+"/"+location,
@@ -16,14 +17,17 @@ function weather_by_city(location){
                     $("h1[name='weather["+i+"][weather_state_name]']").html(response["consolidated_weather"][i]["weather_state_name"]);
                 }
                 $("span[name='weather[wind_speed]']").text(parseInt(response["consolidated_weather"][0]["wind_speed"]));
+                finish_loading()
             });
         }
         else{
+            finish_loading()
             alert("City Not Found");
         }
     });
 }
 function weather_by_lat_long(latitude, longitude){
+    start_loading()
     $.ajax({
         method: "GET",
         url: url_location+"/"+latidude+"/"+longitude,
@@ -41,14 +45,17 @@ function weather_by_lat_long(latitude, longitude){
                     $("h1[name='weather["+i+"][weather_state_name]']").html(response["consolidated_weather"][i]["weather_state_name"]);
                 }
                 $("span[name='weather[wind_speed]']").html(response["consolidated_weather"][i]["wind_speed"]);
+                finish_loading()
             });
         }
         else{
             alert("City Not Found");
+            finish_loading()
         }
     });
 }
 function find_city(keyword){
+    start_loading()
     $.ajax({
         method: "GET",
         url: url_save+"/"+keyword,
@@ -56,4 +63,13 @@ function find_city(keyword){
         return true;
     });
     weather_by_city(keyword);
+}
+
+function start_loading(){
+    $(".modal").show();
+    $("body").addClass("loading")
+}
+function finish_loading(){
+    $(".modal").hide();
+    $("body").removeClass("loading")
 }
