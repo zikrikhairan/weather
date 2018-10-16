@@ -19,7 +19,7 @@ class HomeController extends Controller
     public function list(){
         $token = session()->get('user_token');
         $data = User::with('saved_cities')->where('token', $token)->first();
-        return view('list', $data);
+        return view('list', ["data" => $data]);
     }
 
 
