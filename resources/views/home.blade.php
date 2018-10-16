@@ -23,22 +23,31 @@
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div class="container">
-            <a class="navbar-brand" href="{{url('')}}">Weather</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{url('dashboard')}}">Dashboard</a>
-                    </li>
-                    <li class="nav-item">
-                        <div class="form-inline">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Find Location" aria-label="Search" id="search">
-                            <button class="btn btn-outline-light my-2 my-sm-0" type="button" id="btn_search">Find</button>
-                        </div>
-                    </li>
-                </ul>
+                <a class="navbar-brand" href="{{url('')}}">Weather</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dashboard
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="{{url('list')}}">List City</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="form-inline">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Find Location" aria-label="Search" id="search">
+                                <button class="btn btn-outline-light my-2 my-sm-0" type="button" id="btn_search">Find</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
         <section class="header">

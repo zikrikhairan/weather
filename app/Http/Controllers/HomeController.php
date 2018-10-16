@@ -16,6 +16,13 @@ class HomeController extends Controller
         $this->get_token();
         return view('home');
     }
+    public function list(){
+        $token = session()->get('user_token');
+        $data = User::with('saved_cities')->where('token', $token)->first();
+        return view('list', $data);
+    }
+
+
     public function location($keyword){
         $data = Helpers::metaweather('GET','location/search/?query='.$keyword);
         return $data;
