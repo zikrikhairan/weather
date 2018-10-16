@@ -49,5 +49,11 @@ function weather_by_lat_long(latitude, longitude){
     });
 }
 function find_city(keyword){
+    $.ajax({
+        method: "GET",
+        url: url_save+"/"+keyword,
+    }).done(function(data) {
+        return true;
+    });
     weather_by_city(keyword);
 }

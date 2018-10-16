@@ -15,6 +15,7 @@
             var position;
             var url_location = "{{url('location')}}";
             var url_weather = "{{url('weather')}}";
+            var url_save = "{{url('save')}}";
             var url_image = "{{env('METAWEATHER_IMAGE')}}";
         </script>
     </head>
