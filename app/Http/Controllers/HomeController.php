@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Helpers;
+use App\User;
+use App\SavedCity;
+use Hash;
+use Carbon\Carbon;
 
 class HomeController extends Controller
 {
