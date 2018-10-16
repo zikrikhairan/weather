@@ -1,4 +1,4 @@
-function weather_by_city(url, location){
+function weather_by_city(location){
     $.ajax({
         method: "GET",
         url: url_location+"/"+location,
@@ -23,7 +23,7 @@ function weather_by_city(url, location){
         }
     });
 }
-function weather_by_lat_long(url, latitude, longitude){
+function weather_by_lat_long(latitude, longitude){
     $.ajax({
         method: "GET",
         url: url_location+"/"+latidude+"/"+longitude,
@@ -47,4 +47,7 @@ function weather_by_lat_long(url, latitude, longitude){
             alert("City Not Found");
         }
     });
+}
+function find_city(keyword){
+    weather_by_city(keyword);
 }

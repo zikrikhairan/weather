@@ -33,8 +33,8 @@
                     </li>
                     <li class="nav-item">
                         <div class="form-inline">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Type Your Location" aria-label="Search" id="search">
-                            <button class="btn btn-outline-light my-2 my-sm-0" type="button">Find</button>
+                            <input class="form-control mr-sm-2" type="search" placeholder="Find Location" aria-label="Search" id="search">
+                            <button class="btn btn-outline-light my-2 my-sm-0" type="button" id="btn_search">Find</button>
                         </div>
                     </li>
                 </ul>
@@ -204,9 +204,9 @@
       }
 
         </script>
-        <script async defer
+        {{-- <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCs3DPAN9pcNR6CBFXolpNNrE7PIxpbiGA&callback=initMap">
-        </script>
+        </script> --}}
       
         <script src="{{asset('assets/jquery/jquery.min.js')}}"></script>
         <script src="{{asset('assets/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
@@ -214,16 +214,19 @@
         <script>
         $(document).ready(function(){
             if(position){
-                weather_by_lat_long("{{url('location')}}",position['lat'], position['lng']);
+                weather_by_lat_long(position['lat'], position['lng']);
             }
             else{
-                weather_by_city("{{url('location')}}", "Jakarta");
+                weather_by_city("Jakarta");
             }
             $("#search").keypress(function(e) {
                 if(e.which == 13){
                     find_city($(this).val());
                 }
-            })
+            });
+            $("#btn_search").click(function(){
+                find_city($("#search").val());
+            });
         });
         </script>
     </body>
