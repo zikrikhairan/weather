@@ -9,13 +9,18 @@ function weather_by_city(location){
                 method: "GET",
                 url: url_weather+"/"+data[0]["woeid"],
             }).done(function(response) {
+                $("h3[name='city']").html(response["title"]);
                 for(var i = 0; i < response["consolidated_weather"].length; i++){
                     $("span[name='weather["+i+"][the_temp]']").text(parseInt(response["consolidated_weather"][i]["the_temp"]));
                     $("span[name='weather["+i+"][min_temp]']").text(parseInt(response["consolidated_weather"][i]["min_temp"]));
                     $("span[name='weather["+i+"][max_temp]']").text(parseInt(response["consolidated_weather"][i]["max_temp"]));
                     $("img[name='weather["+i+"][image]']").attr('src', url_image+"/"+response["consolidated_weather"][i]["weather_state_abbr"]+".svg");
                     $("h1[name='weather["+i+"][weather_state_name]']").html(response["consolidated_weather"][i]["weather_state_name"]);
+                    var dateStr = response["consolidated_weather"][i]["applicable_date"];
+                    var day = getDayName(dateStr, "en-EN");
+                    $("span[name='weather["+i+"][day]']").text(day);
                 }
+                $("span[name='weather[wind_speed]']").text(parseInt(response["consolidated_weather"][0]["wind_speed"]));
                 $("span[name='weather[wind_speed]']").text(parseInt(response["consolidated_weather"][0]["wind_speed"]));
                 finish_loading()
             });
@@ -72,4 +77,8 @@ function start_loading(){
 function finish_loading(){
     $(".modal").hide();
     $("body").removeClass("loading")
+}
+function getDayName(dateStr, locale){
+    var date = new Date(dateStr);
+    return date.toLocaleDateString(locale, { weekday: 'long' });        
 }

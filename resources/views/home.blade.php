@@ -55,17 +55,22 @@
                     <img class="ray" src="{{asset('assets/images/ray.png')}}">
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-8 col-xs-12 offset-lg-4 offset-md-4 offset-sm-3">
-                        <div class="card">
+                        <div class="card card-today">
+                            <div class="card-header text-center">
+                                <h3 name="city">Jakarta</h3>
+                            </div>
                             <div class="card-body">
                                 <div class="row clearfix">
-                                    <div class="col-lg-4 col-md-6 col-sm-6 col-6 text-center today-weather">
-                                        <h2><span name="weather[0][the_temp]" class="weather">12</span>&#176;</h2>
-                                        <h6><span name="weather[0][min_temp]">9</span>&#176; / <span name="weather[0][max_temp]">22</span>&#176;</h6>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-12 text-center today-weather">
+                                        <h2><span name="weather[0][the_temp]" class="the-temp white">12</span><span class="white">&#176;</span></h2>
+                                        <h6 class="white"><span name="weather[0][min_temp]" class="min-temp blue">9</span><span class="blue">&#176;</span> / <span name="weather[0][max_temp]" class="max-temp orange">22&#176;</span><span class="orange">&#176;</span></h6>
                                     </div>
-                                    <div class="col-lg-8 col-md-6 col-sm-6 col-6 text-center">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-12 text-center">
                                         <img src="https://www.metaweather.com/static/img/weather/png/c.png" alt="" class="img-fluid today-image" name="weather[0][image]">
                                         {{-- <p class="text-right">RealFeel&#8482;  11&#176;</p> --}}
-                                        <h1 name="weather[0][weather_state_name]">Sunny</h1>
+                                    </div>
+                                    <div class="col-md-12 text-center">
+                                        <h2 name="weather[0][weather_state_name]" class="blue">Sunny</h2>
                                     </div>
                                 </div>
                             </div>
@@ -78,7 +83,7 @@
                     <div class="col-md-11 offset-md-1">
                         <div class="col-md-6">
                             <i class="fas fa-wind"></i>
-                            <span>Wind <span name="weather[wind_speed]"> - </span> mph</span>&nbsp;&nbsp;&nbsp;
+                            <span class="blue">Wind </span> <span name="weather[wind_speed]" class="white"> - </span> <span class="white"> mph</span>&nbsp;&nbsp;&nbsp;
                             {{-- <i class="fas fa-tint"></i>
                             <span>Rain 6,3 mm</span>&nbsp;&nbsp;&nbsp;
                             <i class="fas fa-cloud"></i>
@@ -95,16 +100,16 @@
                     <div class="col-lg-2 col-md-4 col-sm-6 col-12 offset-lg-1 thumb">
                         <div class="card ">
                             <div class="card-header text-center">
-                                <span name="weather[1][day]">Thursday</span>
+                                <span name="weather[1][day]" class="blue">Thursday</span>
                             </div>
                             <div class="card-body">
                                 <div class="row clearfix">
-                                    <div class="col-lg-8 col-md-6 col-sm-6 col-6 text-center">
-                                        <img src="https://www.metaweather.com/static/img/weather/png/c.png" alt="" class="img-fluid today-image" name="weather[1][image]">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-12 text-center">
+                                        <img src="https://www.metaweather.com/static/img/weather/png/c.png" alt="" class="img-fluid weather-image" name="weather[1][image]">
                                     </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6 col-6 text-center forecasting-weather">
-                                        <p><span name="weather[1][max_temp]">12</span>&#176;</p>
-                                        <p><span name="weather[1][min_temp]">9</span>&#176;</p>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-12 text-center forecasting-weather" >
+                                        <p class="max-temp orange"><span name="weather[1][max_temp]" >12</span>&#176;</p>
+                                        <p class="blue"><span name="weather[1][min_temp]">9</span>&#176;</p>
                                     </div>
                                 </div>
                             </div>
@@ -113,16 +118,16 @@
                     <div class="col-lg-2 col-md-4 col-sm-6 col-12 thumb">
                         <div class="card">
                             <div class="card-header text-center">
-                                <span name="weather[2][day]">Thursday</span>
+                                <span name="weather[2][day]" class="blue">Thursday</span>
                             </div>
                             <div class="card-body">
                                 <div class="row clearfix">
-                                    <div class="col-lg-8 col-md-6 col-sm-6 col-6 text-center">
-                                        <img src="https://www.metaweather.com/static/img/weather/png/c.png" alt="" class="img-fluid today-image" name="weather[2][image]">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-12 text-center">
+                                        <img src="https://www.metaweather.com/static/img/weather/png/c.png" alt="" class="img-fluid weather-image" name="weather[2][image]">
                                     </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6 col-6 text-center forecasting-weather">
-                                        <p><span name="weather[2][max_temp]">12</span>&#176;</p>
-                                        <p><span name="weather[2][min_temp]">9</span>&#176;</p>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-12 text-center forecasting-weather">
+                                        <p class="max-temp orange"><span name="weather[2][max_temp]">12</span>&#176;</p>
+                                        <p class="blue"><span name="weather[2][min_temp]">9</span>&#176;</p>
                                     </div>
                                 </div>
                             </div>
@@ -131,16 +136,16 @@
                     <div class="col-lg-2 col-md-4 col-sm-6 col-12 thumb">
                         <div class="card">
                             <div class="card-header text-center">
-                                <span name="weather[3][day]">Thursday</span>
+                                <span name="weather[3][day]" class="blue">Thursday</span>
                             </div>
                             <div class="card-body">
                                 <div class="row clearfix">
-                                    <div class="col-lg-8 col-md-6 col-sm-6 col-6 text-center">
-                                        <img src="https://www.metaweather.com/static/img/weather/png/c.png" alt="" class="img-fluid today-image" name="weather[3][image]">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-12 text-center">
+                                        <img src="https://www.metaweather.com/static/img/weather/png/c.png" alt="" class="img-fluid weather-image" name="weather[3][image]">
                                     </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6 col-6 text-center forecasting-weather">
-                                        <p><span name="weather[3][max_temp]">12</span>&#176;</p>
-                                        <p><span name="weather[3][min_temp]">9</span>&#176;</p>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-12 text-center forecasting-weather">
+                                        <p class="max-temp orange"><span name="weather[3][max_temp]">12</span>&#176;</p>
+                                        <p class="blue"><span name="weather[3][min_temp]">9</span>&#176;</p>
                                     </div>
                                 </div>
                             </div>
@@ -149,16 +154,16 @@
                     <div class="col-lg-2 col-md-4 col-sm-6 col-12 thumb">
                         <div class="card">
                             <div class="card-header text-center">
-                                <span name="weather[4][day]">Thursday</span>
+                                <span name="weather[4][day]" class="blue">Thursday</span>
                             </div>
                             <div class="card-body">
                                 <div class="row clearfix">
-                                    <div class="col-lg-8 col-md-6 col-sm-6 col-6 text-center">
-                                        <img src="https://www.metaweather.com/static/img/weather/png/c.png" alt="" class="img-fluid today-image" name="weather[4][image]">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-12 text-center">
+                                        <img src="https://www.metaweather.com/static/img/weather/png/c.png" alt="" class="img-fluid weather-image" name="weather[4][image]">
                                     </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6 col-6 text-center forecasting-weather">
-                                        <p><span name="weather[4][max_temp]">12</span>&#176;</p>
-                                        <p><span name="weather[4][min_temp]">9</span>&#176;</p>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-12 text-center forecasting-weather">
+                                        <p class="max-temp orange"><span name="weather[4][max_temp]">12</span>&#176;</p>
+                                        <p class="blue"><span name="weather[4][min_temp]">9</span>&#176;</p>
                                     </div>
                                 </div>
                             </div>
@@ -167,16 +172,16 @@
                     <div class="col-lg-2 col-md-4 col-sm-6 col-12 thumb">
                         <div class="card">
                             <div class="card-header text-center">
-                                <span name="weather[5][day]">Thursday</span>
+                                <span name="weather[5][day]" class="blue">Thursday</span>
                             </div>
                             <div class="card-body">
                                 <div class="row clearfix">
-                                    <div class="col-lg-8 col-md-6 col-sm-6 col-6 text-center">
-                                        <img src="https://www.metaweather.com/static/img/weather/png/c.png" alt="" class="img-fluid today-image" name="weather[5][image]">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-12 text-center">
+                                        <img src="https://www.metaweather.com/static/img/weather/png/c.png" alt="" class="img-fluid weather-image" name="weather[5][image]">
                                     </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6 col-6 text-center forecasting-weather">
-                                        <p><span name="weather[1][max_temp]">12</span>&#176;</p>
-                                        <p><span name="weather[1][min_temp]">9</span>&#176;</p>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-12 text-center forecasting-weather">
+                                        <p class="max-temp orange"><span name="weather[5][max_temp]">12</span>&#176;</p>
+                                        <p class="blue"><span name="weather[5][min_temp]">9</span>&#176;</p>
                                     </div>
                                 </div>
                             </div>
