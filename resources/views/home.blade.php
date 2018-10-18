@@ -220,9 +220,9 @@
       }
 
         </script>
-        {{-- <script async defer
+        <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCs3DPAN9pcNR6CBFXolpNNrE7PIxpbiGA&callback=initMap">
-        </script> --}}
+        </script>
       
         <script src="{{asset('assets/jquery/jquery.min.js')}}"></script>
         <script src="{{asset('assets/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
